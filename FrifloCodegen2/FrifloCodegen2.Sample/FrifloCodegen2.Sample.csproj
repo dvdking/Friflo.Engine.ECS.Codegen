@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <RootNamespace>FrifloCodegen2.Sample</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\FrifloCodegen2\FrifloCodegen2.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="DDD.UbiquitousLanguageRegistry.txt"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Friflo.Engine.ECS" Version="3.0.0-preview.10" />
+    </ItemGroup>
+
+</Project>
