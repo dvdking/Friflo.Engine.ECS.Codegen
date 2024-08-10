@@ -16,4 +16,4 @@ public Velocity(float value)
 }
 ```
 
-Code is based on https://github.com/Flavien/quickconstructor
+Code is based on [quickconstructor](https://github.com/Flavien/quickconstructor) 
