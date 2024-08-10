@@ -1,4 +1,4 @@
-Creates constructor for IComponent classes in friflo ECS framework.
+Creates constructor for IComponent classes in [friflo ECS framework](https://github.com/friflo/Friflo.Engine.ECS). 
 
 ```csharp
 public partial struct Velocity : IComponent
