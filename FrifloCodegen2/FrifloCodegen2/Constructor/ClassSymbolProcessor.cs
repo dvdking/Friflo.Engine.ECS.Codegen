@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using FrifloCodegen;
+
 namespace QuickConstructor.Generator;
 
 using System;
@@ -49,9 +51,13 @@ public class ClassSymbolProcessor(
         ClassSymbol.Name));
     }
 
+
+    var partial = ClassSymbol.HasPartial();
+
     return new(
       ClassSymbol,
       Accessibility.Public,
-      members);
+      members,
+      partial);
   }
 }

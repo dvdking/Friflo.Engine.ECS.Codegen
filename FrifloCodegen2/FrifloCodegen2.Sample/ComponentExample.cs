@@ -2,6 +2,12 @@ using Friflo.Engine.ECS;
 
 namespace FrifloCodegen.Tests;
 
+
+public struct TestComponentNonPartial : IComponent
+{
+  public int Value;
+}
+
 public partial struct TestComponent : IComponent
 {
   public int Value;
@@ -43,6 +49,7 @@ public class Tests
     var withType = new TestComponentWithType(world.CreateEntity());
     var withTestClass = new TestComponentWithTestClass(new());
 
+    var nonPartial = new TestComponentNonPartial();
     var tclass = new TestClass();
     
     c.Value++;

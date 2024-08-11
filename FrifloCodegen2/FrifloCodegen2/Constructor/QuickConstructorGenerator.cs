@@ -68,6 +68,9 @@ public class QuickConstructorGenerator : IIncrementalGenerator
     if (syntaxNode is not StructDeclarationSyntax cds)
       return false;
 
+    if (!typeDeclaration.HasPartial())
+      return false;
+
     return cds.HasInterface("IComponent");
   }
 

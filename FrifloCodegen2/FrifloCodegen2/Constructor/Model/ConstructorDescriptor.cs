@@ -20,11 +20,13 @@ using Microsoft.CodeAnalysis;
 public record ConstructorDescriptor(
   INamedTypeSymbol ClassSymbol,
   Accessibility Accessibility,
-  ImmutableArray<ConstructorParameter> ConstructorParameters)
+  ImmutableArray<ConstructorParameter> ConstructorParameters,
+  bool Partial)
 {
   public INamedTypeSymbol ClassSymbol { get; } = ClassSymbol;
 
   public Accessibility Accessibility { get; } = Accessibility;
+  public bool Partial { get; } = Partial;
 
   public bool IsReadOnly { get; }
 
